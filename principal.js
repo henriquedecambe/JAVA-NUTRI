@@ -1,8 +1,9 @@
 // muda o nome a partir do seletor de classe
 var subtitulo = document.querySelector(".subtitulo");
 subtitulo.textContent = "Meus Pacientes";
-var nutricao = document.querySelector(".titulo");
-nutricao.textContent = "henrique peça Nutrição";
+var titulo = document.querySelector(".titulo");
+titulo.textContent = "henrique peça Nutrição";
+
 
 //acessar a tag tr -menos o  paciente Paulo
 var pacientes = document.querySelectorAll(".paciente");
@@ -36,13 +37,21 @@ if(pesoValido && alturaValida){
     if(peso <= 0 || peso >= 1000){
         var pesoValido = false;
         tdImc.textContent = "peso inválido";
-        paciente.style.backgroundColor = "red"
+        paciente.classList.add ("campo-invalido");
         }
 
 if(altura < 0 || altura > 3.00){
     var alturaValida = false;
     tdImc.textContent = "altura inválida";
+    paciente.classList.add ("campo-invalido");
 }
 
 
+}
+
+//QUANDO CLICAR NO TITULO, APAREÇA UMA MENSAGEM
+titulo.addEventListener('click' , mostraMensagem);
+
+function mostraMensagem () {
+    alert("este elemento foi clicado");
 }
