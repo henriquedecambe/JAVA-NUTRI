@@ -82,11 +82,25 @@ var alturaTd = document.createElement("td");
 var gorduraTd = document.createElement("td");
 var imcTd = document.createElement("td");
 
+//adicona valor as tags criadas
 nomeTd.textContent = nome;
 pesoTd.textContent = peso;
 alturaTd.textContent = altura;
 gorduraTd.textContent = gordura;
 imcTd.textContent = imc;
+
+//adicionar as tags na tela do usuario
+pacienteTr.appendChild(nomeTd);
+pacienteTr.appendChild(pesoTd);
+pacienteTr.appendChild(alturaTd);
+pacienteTr.appendChild(gorduraTd);
+pacienteTr.appendChild(imcTd);
+
+//variavel para acessar tdBody
+var tabela = document.querySelector("#tabela-pacientes");
+tabela.appendChild(pacienteTr);
+
+
 
 });
 

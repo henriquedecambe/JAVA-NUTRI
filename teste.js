@@ -1,0 +1,1 @@
+let novoParagrafo = document.createElement("p");
