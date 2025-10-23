@@ -130,6 +130,6 @@ button[disabled=disabled], button:disabled {
 }
 
 .campo-invalido{
-	border: 5px solid red;
-	background-color: red;
+	border: 3px solid red;
+/* background-color: coral; */
 }
